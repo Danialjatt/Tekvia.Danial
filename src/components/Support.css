@@ -1,0 +1,77 @@
+.support {
+    background-color: var(--color-bg-light);
+    padding-bottom: 6rem;
+}
+
+.support-header {
+    margin-bottom: 4rem;
+}
+
+.support-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-top: 1rem;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.support-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: transparent;
+}
+
+.support-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.p-blue {
+    background-color: #f2f0ef;
+    color: var(--color-sage);
+}
+
+.p-purple {
+    background-color: #e8ede8;
+    color: var(--color-grey);
+}
+
+.p-green {
+    background-color: #e8ede8;
+    color: var(--color-forest);
+}
+
+.support-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-main);
+}
+
+.support-card p {
+    color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+}

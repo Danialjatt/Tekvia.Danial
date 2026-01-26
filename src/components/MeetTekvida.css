@@ -1,0 +1,116 @@
+.meet-tekvida {
+    background-color: var(--color-bg-light);
+    padding: 6rem 0;
+}
+
+.meet-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.meet-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.meet-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.video-link:hover {
+    text-decoration: underline;
+}
+
+.play-icon {
+    fill: currentColor;
+}
+
+.meet-visual {
+    position: relative;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 350px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.play-button-large {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 10;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4);
+}
+
+.play-button-large:hover {
+    transform: scale(1.1);
+}
+
+.ml-1 {
+    margin-left: 4px;
+}
+
+.deco-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.c1 {
+    width: 200px;
+    height: 200px;
+    background: var(--color-primary);
+    top: -50px;
+    right: -50px;
+}
+
+.c2 {
+    width: 150px;
+    height: 150px;
+    background: var(--color-accent);
+    bottom: -30px;
+    left: -30px;
+}
+
+@media (max-width: 768px) {
+    .meet-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .meet-actions {
+        justify-content: center;
+    }
+}

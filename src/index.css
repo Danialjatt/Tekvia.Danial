@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Premium Composition - "Eucalyptus Grove" */
+
+  /* Palette Source */
+  --color-sage: #B2AC88;
+  --color-grey: #898989;
+  --color-off-white: #F2F0EF;
+  --color-forest: #4B6E48;
+
+  /* Semantic Mapping */
+  --color-primary: var(--color-forest);
+  --color-primary-dark: #3a5738;
+  --color-primary-light: #e8ede8;
+
+  --color-accent: var(--color-sage);
+  --color-accent-hover: #a19b7a;
+
+  /* Semantic Colors */
+  --color-success: var(--color-forest);
+  --color-info: var(--color-sage);
+  --color-warning: #eab308;
+
+  /* Design Tokens */
+  --gradient-primary: linear-gradient(135deg, var(--color-forest) 0%, var(--color-sage) 100%);
+  --gradient-glow: radial-gradient(circle at top left, #B2AC8840, transparent 40%);
+
+  /* Neutrals */
+  --color-text-main: #2d3730;
+  /* Dark green-grey for better harmony */
+  --color-text-light: var(--color-grey);
+  --color-bg-light: var(--color-off-white);
+  --color-white: #FFFFFF;
+  --color-border: #e0e2e0;
+
+  /* Typography */
+  --font-main: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  /* Switching to Outfit for modern feel if available, else Inter */
+
+  /* Spacing & Layout */
+  --container-width: 1200px;
+  --header-height: 80px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.75rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* Modern Section Spacing */
+section {
+  padding: 6rem 0;
+}
