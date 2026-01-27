@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 
 const FAQItem = ({ question, answer, isOpen, toggle }) => {
     return (
@@ -30,7 +30,7 @@ const FAQItem = ({ question, answer, isOpen, toggle }) => {
                 }}
             >
                 <span>{question}</span>
-                {isOpen ? <ChevronUp size={20} color="var(--color-primary)" /> : <ChevronDown size={20} color="var(--color-grey)" />}
+                {isOpen ? <Minus size={20} color="var(--color-primary)" /> : <Plus size={20} color="var(--color-grey)" />}
             </button>
             <div
                 style={{
@@ -88,7 +88,7 @@ const FAQ = () => {
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                 gap: '4rem',
-                alignItems: 'start'
+                alignItems: 'center'
             }}>
 
                 {/* Left Side - Header */}
