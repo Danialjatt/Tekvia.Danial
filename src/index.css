@@ -85,6 +85,12 @@ img {
   padding: 0 2rem;
 }
 
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

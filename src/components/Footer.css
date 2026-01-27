@@ -71,9 +71,26 @@
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+/* Tablet Responsive */
+@media (max-width: 968px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .footer-brand {
+        grid-column: span 1;
     }
 }

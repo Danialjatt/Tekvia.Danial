@@ -69,6 +69,10 @@
         font-size: 2rem;
     }
 
+    /* Removed forced 1-column layout to let auto-fill handle tablet size */
+}
+
+@media (max-width: 480px) {
     .disciplines-cards {
         grid-template-columns: 1fr;
     }

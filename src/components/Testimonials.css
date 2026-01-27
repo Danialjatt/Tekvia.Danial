@@ -25,3 +25,13 @@
     font-weight: 700;
     color: white;
 }
+
+@media (max-width: 600px) {
+    .testimonial-quote {
+        font-size: 1.25rem;
+    }
+
+    .testimonials {
+        padding: 3rem 0;
+    }
+}

@@ -1,50 +1,26 @@
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
+import './FAQ.css';
 
 const FAQItem = ({ question, answer, isOpen, toggle }) => {
     return (
-        <div
-            className="faq-item"
-            style={{
-                borderBottom: '1px solid var(--color-border)',
-                marginBottom: '1rem',
-                paddingBottom: '1rem'
-            }}
-        >
+        <div className="faq-item">
             <button
+                className="faq-question"
                 onClick={toggle}
-                style={{
-                    width: '100%',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    padding: '1rem 0',
-                    textAlign: 'left',
-                    color: 'var(--color-text-main)',
-                    fontSize: '1.1rem',
-                    fontWeight: '600',
-                    fontFamily: 'var(--font-main)'
-                }}
+                aria-expanded={isOpen}
             >
                 <span>{question}</span>
                 {isOpen ? <Minus size={20} color="var(--color-primary)" /> : <Plus size={20} color="var(--color-grey)" />}
             </button>
             <div
+                className="faq-answer-wrapper"
                 style={{
                     maxHeight: isOpen ? '500px' : '0',
-                    overflow: 'hidden',
-                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                     opacity: isOpen ? 1 : 0
                 }}
             >
-                <p style={{
-                    paddingBottom: '1rem',
-                    color: 'var(--color-text-light)',
-                    lineHeight: '1.6'
-                }}>
+                <p className="faq-answer">
                     {answer}
                 </p>
             </div>
@@ -83,32 +59,16 @@ const FAQ = () => {
     };
 
     return (
-        <section id="faq" style={{ backgroundColor: '#fff', padding: '6rem 0' }}>
-            <div className="container" style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                gap: '4rem',
-                alignItems: 'center'
-            }}>
+        <section id="faq" className="faq-section">
+            <div className="container faq-container">
 
                 {/* Left Side - Header */}
                 <div className="faq-header">
-                    <h2 style={{
-                        fontSize: '2.5rem',
-                        fontWeight: '700',
-                        marginBottom: '1.5rem',
-                        color: 'var(--color-text-main)',
-                        position: 'relative'
-                    }}>
+                    <h2 className="faq-title">
                         Frequently Asked<br />
                         <span className="text-gradient">Questions</span>
                     </h2>
-                    <p style={{
-                        fontSize: '1.1rem',
-                        color: 'var(--color-text-light)',
-                        marginBottom: '2rem',
-                        maxWidth: '400px'
-                    }}>
+                    <p className="faq-desc">
                         Find answers to common questions about our clinic management software. Can't find what you're looking for? Contact our support team.
                     </p>
                     <button className="btn btn-primary">
@@ -117,12 +77,7 @@ const FAQ = () => {
                 </div>
 
                 {/* Right Side - Accordion */}
-                <div className="faq-accordion" style={{
-                    backgroundColor: 'var(--color-bg-light)',
-                    padding: '2rem',
-                    borderRadius: 'var(--radius-lg)',
-                    boxShadow: 'var(--shadow-soft)'
-                }}>
+                <div className="faq-accordion">
                     {faqs.map((faq, index) => (
                         <FAQItem
                             key={index}
