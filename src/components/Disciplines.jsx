@@ -1,4 +1,5 @@
 import React from 'react';
+import { CheckCircle2 } from 'lucide-react';
 import './Disciplines.css';
 
 const disciplines = [
@@ -20,25 +21,27 @@ const Disciplines = () => {
     return (
         <section className="disciplines">
             <div className="container">
-                <div className="disciplines-grid">
-                    <div className="disciplines-content">
-                        <h2 className="section-title">
-                            Tekvida works for <br />
-                            <span className="text-gradient">clinics of every type.</span>
-                        </h2>
-                        <p className="disciplines-desc">
-                            Whether you're a solo practitioner or a multi-disciplinary wellness center, Tekvida adapts to your workflow.
-                        </p>
-                        <a href="#demo" className="btn btn-primary">See how it works for you</a>
-                    </div>
+                <div className="disciplines-header">
+                    <h2 className="section-title">
+                        Tekvida works for <br />
+                        <span className="text-gradient">clinics of every type.</span>
+                    </h2>
+                    <p className="disciplines-desc">
+                        Whether you're a solo practitioner or a multi-disciplinary wellness center, Tekvida adapts to your workflow.
+                    </p>
+                </div>
 
-                    <div className="disciplines-list-container">
-                        <ul className="disciplines-list">
-                            {disciplines.map((item, index) => (
-                                <li key={index} className="discipline-item">{item}</li>
-                            ))}
-                        </ul>
-                    </div>
+                <div className="disciplines-cards">
+                    {disciplines.map((item, index) => (
+                        <div key={index} className="discipline-card">
+                            <CheckCircle2 className="card-icon" size={24} />
+                            <span className="card-text">{item}</span>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="disciplines-cta">
+                    <a href="#demo" className="btn btn-primary">See how it works for you</a>
                 </div>
             </div>
         </section>

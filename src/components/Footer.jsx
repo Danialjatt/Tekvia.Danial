@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Heart } from 'lucide-react';
+import PrivacyModal from './PrivacyModal';
 import './Footer.css';
 
 const Footer = () => {
+    const [showPrivacy, setShowPrivacy] = useState(false);
+
     return (
         <footer className="footer">
             <div className="container">
@@ -46,6 +49,24 @@ const Footer = () => {
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Careers</a></li>
                             <li><a href="#">Contact</a></li>
+                            <li>
+                                <button
+                                    onClick={() => setShowPrivacy(true)}
+                                    style={{
+                                        background: 'none',
+                                        border: 'none',
+                                        padding: 0,
+                                        font: 'inherit',
+                                        color: 'inherit',
+                                        cursor: 'pointer',
+                                        textDecoration: 'none'
+                                    }}
+                                    onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
+                                    onMouseLeave={(e) => e.target.style.color = 'inherit'}
+                                >
+                                    Privacy Policy
+                                </button>
+                            </li>
                             <li><a href="#">Terms</a></li>
                         </ul>
                     </div>
@@ -55,6 +76,8 @@ const Footer = () => {
                     <p>&copy; {new Date().getFullYear()} Tekvida Inc. Made with <Heart size={14} className="inline-icon" /> for you.</p>
                 </div>
             </div>
+
+            <PrivacyModal isOpen={showPrivacy} onClose={() => setShowPrivacy(false)} />
         </footer>
     );
 };

@@ -3,53 +3,73 @@
     padding: 6rem 0;
 }
 
-.disciplines-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+.disciplines-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-main);
+    line-height: 1.2;
 }
 
 .disciplines-desc {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--color-text-light);
-    margin-bottom: 2rem;
-    max-width: 450px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.disciplines-list-container {
-    background: var(--color-bg-light);
-    padding: 2.5rem;
-    border-radius: 24px;
-    position: relative;
-}
-
-.disciplines-list {
+.disciplines-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
 }
 
-.discipline-item {
+.discipline-card {
     display: flex;
     align-items: center;
-    font-weight: 500;
-    color: var(--color-text-main);
-    font-size: 1rem;
+    gap: 1rem;
+    background: var(--color-bg-light);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
 }
 
-.discipline-item::before {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
-    background-color: var(--color-primary);
-    border-radius: 50%;
-    margin-right: 10px;
+.discipline-card:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: var(--shadow-soft);
+    border-color: var(--color-primary-light);
+}
+
+.card-icon {
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.card-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+}
+
+.disciplines-cta {
+    text-align: center;
 }
 
 @media (max-width: 768px) {
-    .disciplines-grid {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .disciplines-cards {
         grid-template-columns: 1fr;
     }
 }
