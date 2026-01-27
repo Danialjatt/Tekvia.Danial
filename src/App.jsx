@@ -4,6 +4,7 @@ import WhyChooseTekvida from './components/WhyChooseTekvida';
 import Features from './components/Features';
 import Testimonials from './components/Testimonials';
 import Disciplines from './components/Disciplines';
+import FAQ from './components/FAQ';
 import Support from './components/Support';
 import Footer from './components/Footer';
 
@@ -18,6 +19,7 @@ function App() {
       </div>
       <Testimonials />
       <Disciplines />
+      <FAQ />
       <Support />
       <Footer />
     </div>
