@@ -78,6 +78,7 @@
     align-items: center;
     justify-content: center;
     color: white;
+    transition: transform 0.2s ease;
 }
 
 .info-item h3 {
@@ -150,6 +151,27 @@
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
+}
+
+/* Link Item Styles */
+.link-item {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    padding: 10px;
+    border-radius: 12px;
+    margin: -10px;
+    /* Offset to maintain alignment */
+}
+
+.link-item:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.link-item:hover .icon-box {
+    transform: scale(1.05);
 }
 
 /* Responsive */
