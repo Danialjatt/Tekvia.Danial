@@ -25,7 +25,7 @@ const Navbar = () => {
                 <div className="desktop-menu">
                     <ul className="nav-links">
                         <li className="nav-item">
-                            <a href="/#features">Features <ChevronDown size={14} /></a>
+                            <Link to="/">Home</Link>
                         </li>
                         <li className="nav-item"><a href="/#pricing">Pricing</a></li>
                         <li className="nav-item"><a href="/#clinics">For Clinics</a></li>
@@ -49,7 +49,7 @@ const Navbar = () => {
                 {isMobileMenuOpen && (
                     <div className="mobile-menu">
                         <ul className="mobile-nav-links">
-                            <li><a href="/#features">Features</a></li>
+                            <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
                             <li><a href="/#pricing">Pricing</a></li>
                             <li><a href="/#clinics">For Clinics</a></li>
                             <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link></li>

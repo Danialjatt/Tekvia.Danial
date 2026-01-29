@@ -38,7 +38,7 @@ const ContactUs = () => {
                         <p className="info-desc">Fill up the form and our Team will get back to you within 24 hours.</p>
 
                         <div className="info-items">
-                            <div className="info-item">
+                            <a href="mailto:hello@tekvida.com" className="info-item link-item">
                                 <div className="icon-box p-blue">
                                     <Mail size={24} />
                                 </div>
@@ -46,9 +46,9 @@ const ContactUs = () => {
                                     <h3>Email</h3>
                                     <p>hello@tekvida.com</p>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div className="info-item">
+                            <a href="tel:+15551234567" className="info-item link-item">
                                 <div className="icon-box p-purple">
                                     <Phone size={24} />
                                 </div>
@@ -56,9 +56,9 @@ const ContactUs = () => {
                                     <h3>Phone</h3>
                                     <p>+1 (555) 123-4567</p>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div className="info-item">
+                            <a href="https://maps.google.com/?q=123+Innovation+Dr,+Tech+City,+TC+90210" target="_blank" rel="noopener noreferrer" className="info-item link-item">
                                 <div className="icon-box p-green">
                                     <MapPin size={24} />
                                 </div>
@@ -66,7 +66,7 @@ const ContactUs = () => {
                                     <h3>Office</h3>
                                     <p>123 Innovation Dr,<br />Tech City, TC 90210</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div className="social-links">
