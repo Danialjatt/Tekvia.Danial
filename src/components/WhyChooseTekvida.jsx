@@ -8,9 +8,6 @@ const WhyChooseTekvida = () => {
             <div className="container why-choose-container">
                 {/* Left Column */}
                 <div className="why-choose-content">
-                    <div className="badge-tag">
-                        <span className="rocket-icon">🚀</span> Why Choose Tekvida?
-                    </div>
 
                     <h2 className="section-title">
                         The Complete Healthcare <br />
