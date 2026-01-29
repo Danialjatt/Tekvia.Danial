@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import './Navbar.css';
 
@@ -17,18 +18,18 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-container">
-                <a href="/" className="logo">
+                <Link to="/" className="logo">
                     tekvida
-                </a>
+                </Link>
 
                 <div className="desktop-menu">
                     <ul className="nav-links">
                         <li className="nav-item">
-                            <a href="#features">Features <ChevronDown size={14} /></a>
+                            <a href="/#features">Features <ChevronDown size={14} /></a>
                         </li>
-                        <li className="nav-item"><a href="#pricing">Pricing</a></li>
-                        <li className="nav-item"><a href="#clinics">For Clinics</a></li>
-                        <li className="nav-item"><a href="#learn">Learn</a></li>
+                        <li className="nav-item"><a href="/#pricing">Pricing</a></li>
+                        <li className="nav-item"><a href="/#clinics">For Clinics</a></li>
+                        <li className="nav-item"><Link to="/contact">Contact Us</Link></li>
                     </ul>
 
                     <div className="nav-actions">
@@ -48,10 +49,10 @@ const Navbar = () => {
                 {isMobileMenuOpen && (
                     <div className="mobile-menu">
                         <ul className="mobile-nav-links">
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
-                            <li><a href="#clinics">For Clinics</a></li>
-                            <li><a href="#learn">Learn</a></li>
+                            <li><a href="/#features">Features</a></li>
+                            <li><a href="/#pricing">Pricing</a></li>
+                            <li><a href="/#clinics">For Clinics</a></li>
+                            <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link></li>
                             <li className="mobile-actions">
                                 <a href="#login">Sign In</a>
                                 <a href="#signup" className="btn btn-primary">Sign Up</a>

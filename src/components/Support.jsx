@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { LifeBuoy, BookOpen, Video } from 'lucide-react';
 import './Support.css';
 
@@ -32,13 +33,13 @@ const Support = () => {
                         <p>Watch short tutorials to become a pro.</p>
                     </a>
 
-                    <a href="#contact" className="support-card">
+                    <Link to="/contact" className="support-card">
                         <div className="support-icon p-green">
                             <LifeBuoy size={32} />
                         </div>
                         <h3>Contact Us</h3>
                         <p>Talk to our friendly support team anytime.</p>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
