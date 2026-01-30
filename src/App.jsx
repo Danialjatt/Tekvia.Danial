@@ -2,7 +2,11 @@ import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import ContactUs from './components/ContactUs';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
 import Footer from './components/Footer';
+
+import ForClinics from './components/ForClinics';
 
 function App() {
   return (
@@ -12,6 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/clinics" element={<ForClinics />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<SignIn />} />
       </Routes>
       <Footer />
     </div>

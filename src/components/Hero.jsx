@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 import './Hero.css';
 
@@ -16,9 +17,9 @@ const Hero = () => {
                     </p>
 
                     <div className="hero-actions">
-                        <a href="#signup" className="btn btn-primary big-btn">
+                        <Link to="/signup" className="btn btn-primary big-btn">
                             Get Started <ArrowRight size={20} className="ml-2" />
-                        </a>
+                        </Link>
                         <a href="#demo" className="btn btn-outline big-btn">
                             Book a Demo
                         </a>
