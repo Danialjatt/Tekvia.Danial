@@ -230,7 +230,7 @@
 }
 
 /* Response */
-@media (max-width: 1024px) {
+@media (max-width: 968px) {
     .section-title {
         font-size: 2.5rem;
     }

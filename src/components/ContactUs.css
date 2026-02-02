@@ -175,7 +175,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 968px) {
     .contact-grid {
         grid-template-columns: 1fr;
     }

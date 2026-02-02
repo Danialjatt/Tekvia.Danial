@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import ContactUs from './components/ContactUs';
 import SignUp from './components/SignUp';
@@ -9,9 +9,12 @@ import Footer from './components/Footer';
 import ForClinics from './components/ForClinics';
 
 function App() {
+  const location = useLocation();
+  const isAuthPage = ['/signup', '/login'].includes(location.pathname);
+
   return (
     <div className="app">
-      <Navbar />
+      {!isAuthPage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -20,7 +23,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<SignIn />} />
       </Routes>
-      <Footer />
+      {!isAuthPage && <Footer />}
     </div>
   );
 }
