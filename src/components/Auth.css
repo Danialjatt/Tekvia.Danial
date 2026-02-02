@@ -235,10 +235,11 @@
 /* Responsive */
 @media (max-width: 968px) {
     .auth-page {
+        position: relative;
         flex-direction: column;
         height: auto;
         min-height: 100vh;
-        overflow-y: auto;
+        overflow-y: visible;
     }
 
     .auth-brand {
