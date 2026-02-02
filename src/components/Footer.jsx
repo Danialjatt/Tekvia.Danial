@@ -50,18 +50,8 @@ const Footer = () => {
                             <li><a href="#">Contact</a></li>
                             <li>
                                 <button
+                                    className="footer-link-btn"
                                     onClick={() => setShowPrivacy(true)}
-                                    style={{
-                                        background: 'none',
-                                        border: 'none',
-                                        padding: 0,
-                                        font: 'inherit',
-                                        color: 'inherit',
-                                        cursor: 'pointer',
-                                        textDecoration: 'none'
-                                    }}
-                                    onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
-                                    onMouseLeave={(e) => e.target.style.color = 'inherit'}
                                 >
                                     Privacy Policy
                                 </button>

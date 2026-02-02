@@ -57,6 +57,23 @@
     color: var(--color-primary);
 }
 
+.footer-link-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: var(--color-text-light);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.95rem;
+    /* Match .footer-col ul li a */
+}
+
+.footer-link-btn:hover {
+    color: var(--color-primary);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;

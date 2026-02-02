@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Check, AlertCircle } from 'lucide-react';
 import './Auth.css';
+import PrivacyModal from './PrivacyModal';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -15,6 +16,7 @@ const SignUp = () => {
     });
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [showPrivacy, setShowPrivacy] = useState(false);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -179,7 +181,7 @@ const SignUp = () => {
                                 required
                             />
                             <label htmlFor="agreeToTerms" className="checkbox-label">
-                                I agree to the <a href="#terms" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>Terms of Service</a> and <a href="#privacy" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>Privacy Policy</a>.
+                                I agree to the <a href="#terms" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>Terms of Service</a> and <button type="button" onClick={() => setShowPrivacy(true)} style={{ color: 'var(--color-primary)', textDecoration: 'underline', background: 'none', border: 'none', padding: 0, font: 'inherit', cursor: 'pointer', display: 'inline' }}>Privacy Policy</button>.
                             </label>
                         </div>
 
@@ -203,6 +205,7 @@ const SignUp = () => {
                     </button>
                 </div>
             </div>
+            <PrivacyModal isOpen={showPrivacy} onClose={() => setShowPrivacy(false)} />
         </div>
     );
 };
