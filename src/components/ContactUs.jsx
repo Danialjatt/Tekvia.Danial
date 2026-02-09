@@ -40,7 +40,7 @@ const ContactUs = () => {
                         <div className="info-items">
                             <a href="mailto:hello@tekvida.com" className="info-item link-item">
                                 <div className="icon-box p-blue">
-                                    <Mail size={24} />
+                                    <Mail size={48} />
                                 </div>
                                 <div>
                                     <h3>Email</h3>
@@ -50,7 +50,7 @@ const ContactUs = () => {
 
                             <a href="tel:+15551234567" className="info-item link-item">
                                 <div className="icon-box p-purple">
-                                    <Phone size={24} />
+                                    <Phone size={48} />
                                 </div>
                                 <div>
                                     <h3>Phone</h3>
@@ -60,7 +60,7 @@ const ContactUs = () => {
 
                             <a href="https://maps.google.com/?q=123+Innovation+Dr,+Tech+City,+TC+90210" target="_blank" rel="noopener noreferrer" className="info-item link-item">
                                 <div className="icon-box p-green">
-                                    <MapPin size={24} />
+                                    <MapPin size={48} />
                                 </div>
                                 <div>
                                     <h3>Office</h3>

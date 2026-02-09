@@ -9,7 +9,7 @@ const Support = () => {
             <div className="container">
                 <div className="support-header text-center">
                     <h2 className="section-title">
-                        We're here to <span className="text-gradient">help</span>.
+                        We're here to <span style={{ color: '#000000' }}>help</span>.
                     </h2>
                     <p className="support-subtitle">
                         Unlimited, free support to help you get started and keep running smoothly.

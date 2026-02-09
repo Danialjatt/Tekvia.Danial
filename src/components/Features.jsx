@@ -4,37 +4,37 @@ import './Features.css';
 
 const features = [
     {
-        icon: <Calendar size={24} />,
+        icon: <Calendar size={48} />,
         title: "Smart Scheduling",
         description: "Intelligent appointment booking with automated reminders and conflict detection.",
         color: "blue"
     },
     {
-        icon: <Users size={24} />,
+        icon: <Users size={48} />,
         title: "Patient Management",
         description: "Comprehensive profiles with history, insurance details, and communication preferences.",
         color: "purple"
     },
     {
-        icon: <FileText size={24} />,
+        icon: <FileText size={48} />,
         title: "Digital Health Records",
         description: "Secure, HIPAA-compliant electronic health records with treatment plans and prescriptions.",
         color: "green"
     },
     {
-        icon: <BarChart2 size={24} />,
+        icon: <BarChart2 size={48} />,
         title: "Analytics & Insights",
         description: "Real-time performance metrics and patient trends to grow your practice.",
         color: "orange"
     },
     {
-        icon: <ShieldCheck size={24} />,
+        icon: <ShieldCheck size={48} />,
         title: "Enterprise Security",
         description: "Bank-level encryption and regular security audits for total peace of mind.",
         color: "red"
     },
     {
-        icon: <Zap size={24} />,
+        icon: <Zap size={48} />,
         title: "Lightning Fast",
         description: "Optimized performance with 99.9% uptime guarantee and seamless navigation.",
         color: "yellow"
