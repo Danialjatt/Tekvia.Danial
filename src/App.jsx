@@ -6,6 +6,7 @@ import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Footer from './components/Footer';
 
+import Pricing from './components/Pricing';
 import ForClinics from './components/ForClinics';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="/clinics" element={<ForClinics />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<SignIn />} />

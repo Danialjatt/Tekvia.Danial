@@ -27,7 +27,7 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link to="/">Home</Link>
                         </li>
-                        <li className="nav-item"><a href="/#pricing">Pricing</a></li>
+                        <li className="nav-item"><Link to="/pricing">Pricing</Link></li>
                         <li className="nav-item"><Link to="/clinics">For Clinics</Link></li>
                         <li className="nav-item"><Link to="/contact">Contact Us</Link></li>
                     </ul>
@@ -50,7 +50,7 @@ const Navbar = () => {
                     <div className="mobile-menu">
                         <ul className="mobile-nav-links">
                             <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
-                            <li><a href="/#pricing">Pricing</a></li>
+                            <li><Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)}>Pricing</Link></li>
                             <li><Link to="/clinics" onClick={() => setIsMobileMenuOpen(false)}>For Clinics</Link></li>
                             <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link></li>
                             <li className="mobile-actions">

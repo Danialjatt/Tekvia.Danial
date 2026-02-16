@@ -11,7 +11,7 @@ const WhyChooseTekvida = () => {
 
                     <h2 className="section-title">
                         The Complete Healthcare <br />
-                        <span style={{ color: '#000000' }}>Management Solution</span>
+                        <span>Management Solution</span>
                     </h2>
 
                     <p className="section-description">

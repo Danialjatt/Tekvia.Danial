@@ -27,7 +27,7 @@
   --gradient-glow: radial-gradient(circle at top left, #B2AC8840, transparent 40%);
 
   /* Neutrals */
-  --color-text-main: #2d3730;
+  --color-text-main: var(--color-primary);
   /* Dark green-grey for better harmony */
   --color-text-light: var(--color-grey);
   --color-bg-light: var(--color-off-white);
